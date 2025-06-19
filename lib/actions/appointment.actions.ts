@@ -8,7 +8,6 @@ import { Appointment } from "@/types/appwrite.types";
 import {
   APPOINTMENT_COLLECTION_ID,
   DATABASE_ID,
-  PATIENT_COLLECTION_ID,
   databases,
   messaging,
 } from "../appwrite.config";

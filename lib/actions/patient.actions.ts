@@ -5,9 +5,7 @@ import { ID, InputFile, Query } from "node-appwrite";
 import {
   BUCKET_ID,
   DATABASE_ID,
-  ENDPOINT,
   PATIENT_COLLECTION_ID,
-  PROJECT_ID,
   databases,
   storage,
   users,
@@ -61,7 +59,6 @@ export const registerPatient = async ({
 }: RegisterUserParams) => {
   try {
     // Upload file ->  // https://appwrite.io/docs/references/cloud/client-web/storage#createFile
-    let file;
     if (identificationDocument) {
       const inputFile =
         identificationDocument &&
@@ -70,7 +67,7 @@ export const registerPatient = async ({
           identificationDocument?.get("fileName") as string
         );
 
-      file = await storage.createFile(BUCKET_ID!, ID.unique(), inputFile);
+      await storage.createFile(BUCKET_ID!, ID.unique(), inputFile);
     }
 
     // Create new patient document -> https://appwrite.io/docs/references/cloud/server-nodejs/databases#createDocument
