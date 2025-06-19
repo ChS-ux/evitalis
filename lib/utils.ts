@@ -18,7 +18,7 @@ export const formatDateTime = (dateString: Date | string, timeZone: string = Int
     hour: "2-digit",
     minute: "2-digit",
     hour12: false, // 24-godzinny format
-    timeZone: timeZone,
+    timeZone,
   };
 
   const dateDayOptions: Intl.DateTimeFormatOptions = {
@@ -26,21 +26,21 @@ export const formatDateTime = (dateString: Date | string, timeZone: string = Int
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
-    timeZone: timeZone,
+    timeZone,
   };
 
   const dateOptions: Intl.DateTimeFormatOptions = {
     month: "short",
     year: "numeric",
     day: "numeric",
-    timeZone: timeZone,
+    timeZone,
   };
 
   const timeOptions: Intl.DateTimeFormatOptions = {
     hour: "2-digit",
     minute: "2-digit",
     hour12: false, // 24-godzinny format
-    timeZone: timeZone,
+    timeZone,
   };
 
   const formattedDateTime: string = new Date(dateString).toLocaleString(
