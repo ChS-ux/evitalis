@@ -198,7 +198,7 @@ export const AppointmentForm = ({
                 name="note"
                 label="Uwagi/komentarze"
                 placeholder="Preferowane godziny popołudniowe, jeśli to możliwe"
-                disabled={type === "cancel"}
+                disabled={false}
               />
             </div>
           </>
